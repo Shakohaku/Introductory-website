@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกียรติบัตร</title>
+    <link rel="stylesheet" href="activity.css">
+    <link rel="website icon" type="png"
+    href="/เกียรติบัตร/unnamed.jpg">
+</head>
+<body>
+    <header>เกียรติบัตร</header>
+
+    <div class="main">
+        <nav class="box">
+            <a href="Home.html">Home</a>
+        </nav>
+        <nav class="box1">
+            <a href="Contact.html">contact</a>
+        </nav>
+        <nav class="Activity">
+            <a href="activity.html">Activity</a> 
+        </nav>
+    </div>
+
+<div class="Activity1">
+  <div class="slider-container">
+    <div class="slider-track" id="sliderTrack">
+      <div class="slide"><img src="Screenshot 2025-09-25 210354.png" alt="1"></div>
+      <div class="slide"><img src="Screenshot 2025-09-12 204106.png" alt="2"></div>
+      <div class="slide"><img src="Screenshot 2025-07-30 213031.png" alt="3"></div>
+      <div class="slide"><img src="Screenshot 2025-09-11 220250.png" alt="4"></div>
+      <div class="slide"><img src="490986073_9682471608457221_432350772830837924_n.jpg" alt="5"></div>
+      <div class="slide"><img src="490987039_1004612211324078_3334439566533592664_n.jpg" alt="6"></div>
+      <div class="slide"><img src="490988268_1353377139214449_8522055991906545971_n.jpg" alt="7"></div>
+      <div class="slide"><img src="9ef9684a-d08d-43b6-a9d4-57cbbc9d2faf.jfif" alt="8"></div>
+      <div class="slide"><img src="52b62033-df5e-4616-a0ba-2feb5cffb972.jfif" alt="9"></div>
+      <div class="slide"><img src="c521f253-48d2-478e-aed2-a845e730ceb7.jfif" alt="10"></div>
+      <div class="slide"><img src="c98ac358-c3da-4914-8ed4-b56b6780ccaa.jfif" alt="11"></div>
+      <div class="slide"><img src="9d540a56-42e4-43f1-beb4-f28ffe2ce63c.jfif" alt="12"></div>
+      <div class="slide"><img src="9979f021-1d3b-43a4-83fa-0191b2b33ead.jfif" alt="13"></div>
+      <div class="slide"><img src="Screenshot 2025-07-30 211355.png" alt="14"></div>
+      <div class="slide"><img src="f8da47f2-d894-4ab9-95b5-1ee27c9b5146.jfif" alt="15"></div>
+      <div class="slide"><img src="5728be4f-f70b-4893-af2d-bf3b4322b7e9.jfif" alt="16"></div>
+      <div class="slide"><img src="Screenshot 2025-10-02 162216.png" alt="17"></div>
+      <div class="slide"><img src="Screenshot 2025-10-02 162140.png" alt="18"></div>
+      <div class="slide"><img src="Screenshot 2025-10-02 160850.png" alt="19"></div>
+      <div class="slide"><img src="Screenshot 2025-10-02 160507.png" alt="20"></div>
+  
+
+
+    </div>
+
+    <button class="btn btn-left" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="btn btn-right" onclick="moveSlide(1)">&#10095;</button>
+
+    <div class="caption" id="caption">
+      การแข่งขันยุวชนนักสื่อสารประกันภัยรุ่นใหม่  
+    </div>
+  </div>
+
+  <script>
+    const track = document.getElementById("sliderTrack");
+    const slides = document.querySelectorAll(".slide");
+    const caption = document.getElementById("caption");
+
+    const captions = [
+      "การแข่งขันยุวชนนักสื่อสารประกันภัยรุ่นใหม่",
+      "การแข่งขันประกวดหนังสั้น Wave to Vapes 2025",
+      "ประกวดการนำเสนอผลงานชมรม TO BE NUMBER ONE",
+      "การประกวดเเข่งขันหุ่นยนต์",
+      "เข้าร่วมการฟังบรรยาย Smart leaders",
+      "เข้าร่วมกิจกรรมอบรมต่อต้านยาเสพติด",
+      "เข้าร่วมกิจกรรมจิตอาสาเเละบำเพ็ญประโยชน์",
+      "เข้าร่วมค่ายวิทยาศาสตร์สัญจร",
+      "เข้าฝึกการสกัดดีเอ็นเอจากเซลล์พืชหรือเซลล์สัตว์",
+      "เข้าฝึกปฎิบัติการการไทเทรตกรด-เบส",
+      "เป็นวิทยาการจัดค่ายอาสาพัฒนาเเละเยาวชน",
+      "อบรถต้านภัยยาเสพตติดในสถานศึกษา",
+      "อบรมเครือข่ายเด็กเเละเยาวชนเพื่อป้องกันยาเสพติด",
+      "ฝึกประสบการณ์งานกู้ชีพกู้ภัย",
+      "อบรมเกี่ยวกับโค้ด",
+      "ปฎิบัติหน้าที่คณะกรรมการนักเรียน โรงเรียนเกษตรสมบูรณ์วิทยาคม",
+      "Azure AI: Zero to Hero",
+      "Microsoft AI Skills for All",
+      "AI for All",
+      "อบรม Generative AIเเละการใช้ChatGPT",
+
+
+    ];
+
+    let index = 0;
+
+    function moveSlide(direction) {
+      const totalSlides = slides.length;
+      index += direction;
+      if (index < 0) index = totalSlides - 1;
+      if (index >= totalSlides) index = 0;
+      track.style.transform = `translateX(-${index * 600}px)`;
+      caption.textContent = captions[index];
+    }
+  </script>
+</div>
+
+</body>
+</html>
