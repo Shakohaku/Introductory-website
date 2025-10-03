@@ -142,3 +142,38 @@ header{
   border-top: 1px solid #ddd;
 }
 
+/* มือถือ */
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+/* มือถือแนวนอน / จอเล็ก */
+@media (min-width: 600px) and (max-width: 768px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* iPad แนวตั้ง */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* iPad แนวนอน */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* iPad Pro */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Laptop & Desktop */
+@media (min-width: 1366px) {
+  .grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* 4K */
+@media (min-width: 1920px) {
+  .grid { grid-template-columns: repeat(5, 1fr); }
+}
+
